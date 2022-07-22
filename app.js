@@ -18,7 +18,7 @@ filters.forEach(btn =>{
 })
 if(todos){
 
-var showTodo=function(filter){
+window.showTodo=function(filter){
     let li ="";
     todos.forEach((todo, id) =>{
         //if todo status is completed, set the isCompletd value to checked
