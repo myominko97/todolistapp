@@ -15,7 +15,7 @@ filters.forEach(btn =>{
         showTodo(btn.id);
     })
 })
-console.log(todos)
+
 if(todos){
 function showTodo(filter){
     let li ="";
