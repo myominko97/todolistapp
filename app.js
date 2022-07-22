@@ -18,7 +18,7 @@ filters.forEach(btn =>{
 })
 if(todos){
 
-function showTodo(filter){
+var showTodo=function(filter){
     let li ="";
     todos.forEach((todo, id) =>{
         //if todo status is completed, set the isCompletd value to checked
@@ -115,6 +115,6 @@ taskInput.addEventListener("keyup", e=>{
     }
         taskInput.value="";
         localStorage.setItem("todo-list", JSON.stringify(todos));
-        this.showTodo("all");
+        showTodo("all");
     }
 });
