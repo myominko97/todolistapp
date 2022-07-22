@@ -8,7 +8,7 @@ let isEditedTask = false;
 
  //getting localstorge todo-list
 let todos = JSON.parse(localStorage.getItem("todo-list"));
-if(todos){
+
 filters.forEach(btn =>{
     btn.addEventListener("click", ()=>{
         document.querySelector("span.active").classList.remove("active");
@@ -16,7 +16,7 @@ filters.forEach(btn =>{
         showTodo(btn.id);
     })
 })
-
+if(todos){
 
 function showTodo(filter){
     let li ="";
@@ -52,7 +52,7 @@ function showTodo(filter){
     taskBox.innerHTML = li || `<span> You don't have any task here </span>`;
 }
 showTodo("all");
-
+}
 
 function showMenu(selectedTask){
     //getting task menu div
@@ -115,7 +115,6 @@ taskInput.addEventListener("keyup", e=>{
     }
         taskInput.value="";
         localStorage.setItem("todo-list", JSON.stringify(todos));
-        showTodo("all");
+        this.showTodo("all");
     }
 });
-}
