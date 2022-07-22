@@ -50,8 +50,9 @@ function showTodo(filter){
     // if li isn't empty, insert this value inside taskbox else insert span
     taskBox.innerHTML = li || `<span> You don't have any task here </span>`;
 }
-}
 showTodo("all");
+
+}
 function showMenu(selectedTask){
     //getting task menu div
     let taskMenu = selectedTask.parentElement.lastElementChild;
